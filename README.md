@@ -10,4 +10,4 @@ A simple forms web page made using HTML and CSS
 - Media Queries
 
 ## Deployed :
-- [HERE](#) - on GitHub pages
+- [HERE](https://eyepatch0.github.io/forms/) - on GitHub pages
