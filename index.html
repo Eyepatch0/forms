@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms by syed</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="main_container">
+      <header>
+        <h1>Forms by Syed Mohammed</h1>
+        <p>Please fill this form!</p>
+      </header>
+      <div class="container">
+        <form>
+        <div class="form_segments">
+          <label for="FirstName">First Name <span>*</span></label>
+          <input
+            type="text"
+            name="FirstName"
+            placeholder="Enter your First Name"
+            required
+          />
+        </div>
+        <div class="form_segments">
+          <label for="LastName">Last Name <span>*</span></label>
+          <input
+            type="text"
+            name="LastName"
+            placeholder="Enter your Last Name"
+            required
+          />
+        </div>
+        <div class="form_segments">
+          <label for="email">Email Address <span>*</span></label
+          ><input
+            type="email"
+            name="email"
+            placeholder="Enter your Email Address"
+            required
+          />
+        </div>
+        <div class="form_segments">
+          <label for="phoneNumber"
+            >Phone Number <span>*</span> <span>(Valid Indian Mobile Number)</span></label
+          ><input
+            type="number"
+            name="phoneNumber"
+            placeholder="Enter a vaild Indian Mobile Phone Number"
+            pattern="((\+*)((0[ -]*)*|((91 )*))((\d{12})+|(\d{10})+))|\d{5}([- ]*)\d{6}" 
+            required
+          />
+        </div>
+        <div class="form_segments">
+          <label for="address">Address <span>*</span></label
+          ><input
+            type="text"
+            name="address"
+            placeholder="Enter your Address"
+            required
+          />
+        </div>
+        <div class="form_segments">
+          <label for="city">City <span>*</span></label
+          ><input
+            type="text"
+            name="city"
+            placeholder="Enter the name of your City"
+            required
+          />
+        </div>
+        <div class="form_segments">
+          <label for="state">State <span>*</span></label
+          ><input
+            type="text"
+            name="city"
+            placeholder="Enter the name of your City"
+            required
+          />
+        </div>
+        <div class="form_segments">
+          <label for="zip-code">Pin-Code <span>*</span></label
+          ><input
+            type="number"
+            name="zip-code"
+            placeholder="Enter valid Indian Pin-Code"
+            required
+          />
+                      <!-- pattern="([0-9]{6}|[0-9]{3}\s[0-9]{3})"  have to check-->
+        </div>
+        <div class="form_segments">
+          <label for="social">Social <span>(Optional)</span></label
+          ><input
+            type="text"
+            name="social"
+            placeholder="Enter any social media account link"
+          />
+        </div>
+        <div class="form_segments">
+          <label for="description">Brief Description <span>(Optional)</span></label
+          ><textarea
+            name="description"
+            id="description_area"
+            cols="30"
+            rows="5"
+            placeholder="Enter a brief description about yourself"
+            maxlength="200"
+          ></textarea>
+        </div>
+        <div class="form_segments" id="button_container">
+            <button id="submit_button" type="submit">Submit</button>
+            <button id="reset_button" type="reset">Reset</button>
+        </div>
+        </div>
+      </form>
+    </div>
+    </div>
+  </body>
+</html>
+
+
+<!-- add disabled if required not filled -->
+<!-- <script>
+    const validator = document.querySelectorAll('.form_segments input');
+    const submitButton = document.querySelector('#submit_button');
+    const resetButton = document.querySelector('#reset_button');
+    let v1 = [...validator].filter((e)=>{
+        return e.required == true;
+    });
+    let v2 = v1.filter((e)=>{
+        return e.value == '';
+    });
+    console.log(v2);
+    function validates(){
+        if(v2.length == 0){
+            submitButton.disabled = false;
+            console.log('submit button enabled');
+        }
+        else{
+            submitButton.disabled = true;
+            console.log('disabled');
+        }
+    }
+    submitButton.addEventListener('click',validates);
+    yet to implement  and check if working properly
+</script> -->
